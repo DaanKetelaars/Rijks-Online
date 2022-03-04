@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Rijks-Normal";
-    src: url("../public/assets/fonts/Rijksmuseum-Normal.woff") format("woff");
+    src: url("./public/assets/fonts/Rijksmuseum-Normal.woff") format("woff");
 }
 
 @font-face {
     font-family: "Rijks-Bold";
-    src: url("../public/assets/fonts/Rijksmuseum-Bold.woff") format("woff");
+    src: url("./public/assets/fonts/Rijksmuseum-Bold.woff") format("woff");
 }
 
 ::-webkit-scrollbar {
