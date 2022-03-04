@@ -1,9 +1,9 @@
 import {
     getData
-} from './app/components/Data/getData.js';
+} from './components/Data/getData.js';
 import {
     ScrollJacking
-} from './app/components/SmoothScroll/ScrollJacking.js';
+} from './components/SmoothScroll/ScrollJacking.js';
 
 
 // smooth scrolling
