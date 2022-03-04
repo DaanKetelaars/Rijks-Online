@@ -1,6 +1,9 @@
 import {
     getData
 } from './components/Data/getData.js';
+// import {
+//     fetchData
+// } from './components/data-test/fetchData.js';
 import {
     ScrollJacking
 } from './components/SmoothScroll/ScrollJacking.js';
