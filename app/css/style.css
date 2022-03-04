@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "Rijks-Normal";
+    src: url("/public/assets/fonts/Rijksmuseum-Normal.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Rijks-Bold";
+    src: url("/public/assets/fonts/Rijksmuseum-Bold.woff") format("woff");
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Rijks-Normal";
+}
+
+body {
+    background: #000;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: 10rem;
+}
+
+.searchContainer::after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    position: relative;
+    z-index: 999;
+}
+
+nav img {
+    width: 120px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Rijks-Bold";
+}
+
+#textField {
+    border: none;
+    border-radius: 100px;
+    padding: 1.25rem 3rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: saturate(50%) blur(20px);
+    backdrop-filter: saturate(50%) blur(20px);
+    color: #fff;
+}
+
+#submitBtn {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: saturate(50%) blur(20px);
+    backdrop-filter: saturate(50%) blur(20px);
+    border: none;
+    color: #000;
+    border-radius: 100px;
+    margin-left: 2rem;
+    padding: 1.25rem 3rem;
+    font-family: "Rijks-Bold";
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+}
+
+main {
+    padding: 3rem 0 20rem 0;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+}
+
+figure {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    width: 100%;
+    padding: 3rem 5rem;
+    cursor: pointer;
+}
+
+figure figcaption {
+    margin-top: 2rem;
+    color: #fff;
+}
+
+main figure img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    /* transform: rotate(0deg) skew(-15deg) scale(0.8); */
+}
+
+figure:nth-child(even) {
+    transform: translate(0px, 300px);
+}
+
+figure:nth-child(odd) {
+    transform: translate(0px, 100px);
+}
+
+#root {
+    background-color: red;
+    color: #fff;
+}
