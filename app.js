@@ -8,7 +8,6 @@ import {
 
 // smooth scrolling
 ScrollJacking();
-console.log("test");
 
 // on submit show results
 const form = document.querySelector("form");
