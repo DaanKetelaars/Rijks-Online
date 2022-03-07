@@ -1,12 +1,9 @@
 import {
-    getData
-} from './components/Data/getData.js';
-// import {
-//     fetchData
-// } from './components/data-test/fetchData.js';
+    fetchData
+} from "./modules/data/fetchData.js";
 import {
     ScrollJacking
-} from './components/SmoothScroll/ScrollJacking.js';
+} from './modules/SmoothScroll/ScrollJacking.js';
 
 
 // smooth scrolling
@@ -17,5 +14,5 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", event => {
     event.preventDefault();
-    getData()
+    fetchData()
 })

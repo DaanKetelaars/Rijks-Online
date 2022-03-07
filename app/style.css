@@ -190,3 +190,7 @@ main figure img {
         transform: translate(0px, 100px);
     }
 }
+
+.disabled {
+    display: none;
+}

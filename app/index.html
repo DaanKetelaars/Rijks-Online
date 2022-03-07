@@ -10,20 +10,21 @@
 </head>
 
 <body>
-    <div id="root"></div>
-    <nav>
-        <img src="./public/assets/rijks-logo.png" alt="Rijksmusuem logo">
-    </nav>
-    <header class="searchContainer">
-        <h1>Rijks-Online</h1>
-        <form>
-            <input type="text" id="textField">
-            <input type="submit" id="submitBtn" value="ZOEKEN">
-        </form>
-    </header>
-    <main></main>
-
+    <section data-route="empty">
+        <nav>
+            <img src="./public/assets/rijks-logo.png" alt="Rijksmusuem logo">
+        </nav>
+        <header class="searchContainer">
+            <h1>Rijks-Online</h1>
+            <form>
+                <input type="text" id="textField">
+                <input type="submit" id="submitBtn" value="ZOEKEN">
+            </form>
+        </header>
+    </section>
+    <section data-route="template"></section>
     <script type="module" src="./app.js"></script>
+    <script src="./modules/routie.js"></script>
 </body>
 
 </html>

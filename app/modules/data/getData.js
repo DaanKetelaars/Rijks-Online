@@ -1,7 +1,6 @@
-const getItems = data => {
-    const objects = data.artObjects;
-    // loop over all objects and return items inside to use and clean
-    let items = objects.map(item => {
+const getData = data => {
+    const artWorks = data.artObjects;
+    let getKeys = artWorks.map(item => {
         const url = item.webImage.url + 750;
         const title = item.title;
         const longTitle = item.longTitle;
@@ -15,9 +14,9 @@ const getItems = data => {
             maker
         };
     })
-    return items;
+    return getKeys;
 }
 
 export {
-    getItems
+    getData
 }
