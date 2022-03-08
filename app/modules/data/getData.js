@@ -7,7 +7,6 @@ const getData = data => {
 
     const artWorks = data.artObjects;
     artWorks.length > 0 ? validValue() : inValidValue();
-    // articles.length <= 0 ? displayEmptyState(input.value) : hideEmptyState();
 
     let getKeys = artWorks.map(item => {
         const guid = item.webImage;
