@@ -13,7 +13,7 @@ const renderData = cleanedData => {
                 <h2>${item.title}</h2>
                 <p>${item.maker}</p>
                 </figcaption>
-                <img src=${item.guid.url} alt="${item.longTitle}">
+                <img src=${item.guid.url + 1500} alt="${item.longTitle}">
             </figure>
         </a>
     `;

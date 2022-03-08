@@ -30,7 +30,6 @@ const fetchData = () => {
     fetch(apiKey)
         .then(response => {
             hideLoading()
-            // return response.json();
             return response.json();
         })
         .then(getData)
