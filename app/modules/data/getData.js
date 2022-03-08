@@ -1,22 +1,32 @@
+import {
+    validValue,
+    inValidValue
+} from "./valueState.js"
+
 const getData = data => {
+
     const artWorks = data.artObjects;
+    artWorks.length > 0 ? validValue() : inValidValue();
+    // articles.length <= 0 ? displayEmptyState(input.value) : hideEmptyState();
+
     let getKeys = artWorks.map(item => {
-        const url = item.webImage.url + 1500;
+        const guid = item.webImage;
         const title = item.title;
         const longTitle = item.longTitle;
         const maker = item.principalOrFirstMaker;
         const id = item.id;
         return {
-            url,
+            guid,
             id,
             title,
             longTitle,
-            maker
+            maker,
         };
     })
+
     return getKeys;
 }
 
 export {
-    getData
+    getData,
 }

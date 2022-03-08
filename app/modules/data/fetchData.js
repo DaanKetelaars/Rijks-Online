@@ -5,7 +5,7 @@ import {
     cleanData
 } from "./cleanData.js";
 import {
-    getData
+    getData,
 } from "./getData.js"
 import {
     routing
@@ -14,6 +14,7 @@ import {
     loading,
     hideLoading
 } from "../loader/loader.js";
+
 
 const fetchData = () => {
     loading()
@@ -29,6 +30,7 @@ const fetchData = () => {
     fetch(apiKey)
         .then(response => {
             hideLoading()
+            // return response.json();
             return response.json();
         })
         .then(getData)

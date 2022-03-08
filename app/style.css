@@ -63,14 +63,39 @@ a {
     padding: 0;
     margin: 0;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity .3s ease;
 }
+
+
+.message {
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+}
+
+
 
 #loader.display {
     opacity: 1;
     padding: 3rem 6rem;
     color: white;
     margin-top: 5rem;
+}
+
+.message.display {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+    visibility: visible;
+}
+
+.message h2 {
+    margin-bottom: 2rem;
 }
 
 /***** END BASE *****/
@@ -183,23 +208,6 @@ section figure img {
     position: relative;
 }
 
-div#errorMessage {
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-div#errorMessage div {
-    padding: 2rem;
-    color: #fff;
-    text-align: center;
-}
-
-div#errorMessage div h2 {
-    margin-bottom: 2rem;
-}
 
 /***** END SEARCH RESULTS *****/
 
@@ -281,7 +289,7 @@ section[data-route="detail"] nav {
     }
 
     section ul {
-        padding: 3rem 0 20rem 0;
+        padding: 0 0 20rem 0;
         display: grid;
         width: 100%;
         height: 100%;

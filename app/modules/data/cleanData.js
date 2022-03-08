@@ -1,8 +1,7 @@
 const cleanData = getKeys => {
-    let cleanedData = getKeys.filter(item => {
-        return item.url != 1500;
-    })
-    return cleanedData
+
+    let cleanedData = getKeys;
+    return cleanedData = cleanedData.filter(item => item.guid !== null);
 }
 
 export {

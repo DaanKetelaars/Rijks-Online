@@ -18,7 +18,7 @@ const routing = newData => {
                         <h2>${item.title} - ${item.maker}</h2>
                         <p>${item.longTitle}</p>
                         </figcaption>
-                        <img src="${item.url}" alt="${item.longTitle}">
+                        <img src="${item.guid.url}" alt="${item.longTitle}">
                     </figure>
             `;
                 const li = document.createElement('li');
