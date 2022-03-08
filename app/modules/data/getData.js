@@ -1,7 +1,7 @@
 const getData = data => {
     const artWorks = data.artObjects;
     let getKeys = artWorks.map(item => {
-        const url = item.webImage.url + 750;
+        const url = item.webImage.url + 1500;
         const title = item.title;
         const longTitle = item.longTitle;
         const maker = item.principalOrFirstMaker;

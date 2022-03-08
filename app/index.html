@@ -10,9 +10,11 @@
 </head>
 
 <body>
-    <section data-route="empty">
+    <section data-route="normal">
         <nav>
-            <img src="./public/assets/rijks-logo.png" alt="Rijksmusuem logo">
+            <a href="">
+                <img src="./public/assets/rijks-logo.png" alt="Rijksmusuem logo">
+            </a>
         </nav>
         <header class="searchContainer">
             <h1>Rijks-Online</h1>
@@ -21,8 +23,17 @@
                 <input type="submit" id="submitBtn" value="ZOEKEN">
             </form>
         </header>
+        <div id="loader">Bezig met het laden van de kunstwerken...</div>
+        <div id="errorMessage"></div>
     </section>
-    <section data-route="template"></section>
+    <section data-route="detail" class="disabled">
+        <nav>
+            <a href="">
+                <img src="./public/assets/rijks-logo.png" alt="Rijksmusuem logo">
+            </a>
+            <a class="backBtn" href="#">Terug naar zoeken</a>
+        </nav>
+    </section>
     <script type="module" src="./app.js"></script>
     <script src="./modules/routie.js"></script>
 </body>

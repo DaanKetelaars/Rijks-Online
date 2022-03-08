@@ -1,3 +1,23 @@
+/***** TABLE OF CONTENT
+01 - BASE
+02 - NAV
+03 - SEARCH RESULTS
+04 - RESPONSIVE
+*****/
+
+
+/*
+###### 
+##   ###
+##   ###
+##   ###
+######    awesome css code starts here :)
+*/
+
+
+
+/***** BASE *****/
+
 @font-face {
     font-family: "Rijks-Normal";
     src: url("./public/assets/fonts/Rijksmuseum-Normal.woff") format("woff");
@@ -31,15 +51,31 @@ body {
     background: #000;
 }
 
-.searchContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 5rem 1rem 0 1rem;
+.disabled {
+    display: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+#loader {
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#loader.display {
+    opacity: 1;
+    padding: 3rem 6rem;
+    color: white;
+    margin-top: 5rem;
+}
+
+/***** END BASE *****/
+
+/***** NAV *****/
 
 nav {
     width: 100%;
@@ -55,12 +91,27 @@ nav img {
     width: 90px;
 }
 
+/***** END NAV *****/
+
+
+/***** SEARCH RESULTS *****/
+
 h1 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-transform: uppercase;
     color: #fff;
     font-family: "Rijks-Bold";
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 5rem 1rem 0 1rem;
 }
 
 form {
@@ -101,7 +152,7 @@ form {
     cursor: pointer;
 }
 
-main {
+section {
     padding: 0rem 0 5rem 0;
     display: flex;
     justify-content: flex-start;
@@ -113,7 +164,7 @@ main {
 
 figure {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     padding: 3rem 1rem;
@@ -121,18 +172,70 @@ figure {
 }
 
 figure figcaption {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     color: #fff;
 }
 
-main figure img {
+section figure img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     position: relative;
 }
 
+div#errorMessage {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+div#errorMessage div {
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+div#errorMessage div h2 {
+    margin-bottom: 2rem;
+}
+
+/***** END SEARCH RESULTS *****/
+
+
+/***** DETAIL *****/
+section[data-route="detail"] nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.backBtn {
+    margin-top: 3rem;
+    width: 50%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: saturate(50%) blur(20px);
+    backdrop-filter: saturate(50%) blur(20px);
+    border: none;
+    color: #000;
+    border-radius: 100px;
+    font-family: "Rijks-Bold";
+    position: fixed;
+    bottom: 2rem;
+
+}
+
+/***** END DETAIL *****/
+
+
+
+
+/***** RESPONSIVE *****/
 
 @media (min-width: 768px) {
 
@@ -145,7 +248,14 @@ main figure img {
     }
 
     nav img {
-        width: 120px;
+        width: 200px;
+    }
+
+    .backBtn {
+        height: auto;
+        width: auto;
+        border-radius: 100px;
+        padding: 1.5rem 3rem;
     }
 
     h1 {
@@ -170,27 +280,29 @@ main figure img {
         padding: 1.5rem 3rem;
     }
 
-    main {
+    section ul {
         padding: 3rem 0 20rem 0;
         display: grid;
         width: 100%;
         height: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     }
 
-    figure {
+    section[data-route="detail"] ul li {
+        padding: 0 20rem 0 20rem;
+    }
+
+    ul li {
         padding: 3rem 5rem;
     }
 
-    figure:nth-child(even) {
+    ul li:nth-child(even) {
         transform: translate(0px, 300px);
     }
 
-    figure:nth-child(odd) {
+    ul li:nth-child(odd) {
         transform: translate(0px, 100px);
     }
 }
 
-.disabled {
-    display: none;
-}
+/***** END RESPONSIVE *****/
