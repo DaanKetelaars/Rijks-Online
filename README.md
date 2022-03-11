@@ -52,6 +52,7 @@ Host this project on live-server or localhost.
 
 - [git](https://git-scm.com/)
 - [json](https://www.json.org/json-en.html)
+- [rijks-api](https://data.rijksmuseum.nl/object-metadata/api/)
 
 ## Meta
 For any questions, don't hesitate to reach out!
