@@ -13,7 +13,7 @@ Rijks-Online is a Single Page Application that let's the user search all of the 
 <img src="screenshot.png" alt="example of the live application" />
 
 ## Activity diagram
-<img src="activity-diagram.jpg" alt="activity diagram" />
+<img src="activity-diagram-v2.0.jpg" alt="activity diagram" />
 
 ## Table of Contents
 
