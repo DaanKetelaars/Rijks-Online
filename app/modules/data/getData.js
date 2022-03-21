@@ -14,6 +14,7 @@ const getData = data => {
         const longTitle = item.longTitle;
         const maker = item.principalOrFirstMaker;
         const id = item.id;
+        console.log(id);
         return {
             guid,
             id,

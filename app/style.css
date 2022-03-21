@@ -5,7 +5,6 @@
 04 - RESPONSIVE
 *****/
 
-
 /*
 ###### 
 ##   ###
@@ -13,8 +12,6 @@
 ##   ###
 ######    awesome css code starts here :)
 */
-
-
 
 /***** BASE *****/
 
@@ -59,21 +56,23 @@ a {
     text-decoration: none;
 }
 
+::placeholder {
+    color: #000;
+    opacity: 0.5;
+}
+
 #loader {
     padding: 0;
     margin: 0;
     opacity: 0;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
 }
-
 
 .message {
     padding: 0;
     margin: 0;
     visibility: hidden;
 }
-
-
 
 #loader.display {
     opacity: 1;
@@ -118,7 +117,6 @@ nav img {
 
 /***** END NAV *****/
 
-
 /***** SEARCH RESULTS *****/
 
 h1 {
@@ -127,6 +125,16 @@ h1 {
     text-transform: uppercase;
     color: #fff;
     font-family: "Rijks-Bold";
+}
+
+.searchContainer p {
+    margin-top: 3rem;
+    color: #fff;
+    font-family: "Rijks-Normal";
+}
+
+.searchContainer p.hide {
+    display: none;
 }
 
 .searchContainer {
@@ -208,9 +216,7 @@ section figure img {
     position: relative;
 }
 
-
 /***** END SEARCH RESULTS *****/
-
 
 /***** DETAIL *****/
 section[data-route="detail"] nav {
@@ -235,18 +241,13 @@ section[data-route="detail"] nav {
     font-family: "Rijks-Bold";
     position: fixed;
     bottom: 2rem;
-
 }
 
 /***** END DETAIL *****/
 
-
-
-
 /***** RESPONSIVE *****/
 
 @media (min-width: 768px) {
-
     .searchContainer {
         padding-top: 10rem;
     }

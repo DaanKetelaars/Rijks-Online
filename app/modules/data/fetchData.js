@@ -15,6 +15,9 @@ import {
     hideLoading
 } from "../loader/loader.js";
 
+// zeroState text
+const zeroState = document.querySelector('.zeroState');
+
 
 const fetchData = () => {
     loading()
@@ -30,6 +33,7 @@ const fetchData = () => {
     fetch(apiKey)
         .then(response => {
             hideLoading()
+            zeroState.classList.add('hide')
             return response.json();
         })
         .then(getData)
@@ -40,8 +44,6 @@ const fetchData = () => {
             console.log(`log ${error}`);
         });
 }
-
-
 export {
     fetchData
 }
