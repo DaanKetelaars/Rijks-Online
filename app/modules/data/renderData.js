@@ -4,9 +4,8 @@ const renderData = cleanedData => {
     section.appendChild(ul)
 
     const newData = cleanedData;
-    cons =
-        newData.map(item => {
-            const figures = `
+    newData.map(item => {
+        const figures = `
         <a href="#artwork/${item.id}">
             <figure>
                 <figcaption>
@@ -17,10 +16,10 @@ const renderData = cleanedData => {
             </figure>
         </a>
     `;
-            const li = document.createElement('li');
-            li.innerHTML = figures;
-            ul.appendChild(li);
-        })
+        const li = document.createElement('li');
+        li.innerHTML = figures;
+        ul.appendChild(li);
+    })
     return newData
 }
 

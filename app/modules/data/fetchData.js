@@ -40,9 +40,9 @@ const fetchData = () => {
         .then(cleanData)
         .then(renderData)
         .then(routing)
-        .catch(error => {
-            console.log(`log ${error}`);
-        });
+    // .catch(error => {
+    //     console.log(`log ${error}`);
+    // });
 }
 export {
     fetchData
